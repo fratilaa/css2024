@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 40%;
+            float: left;
+            margin: 20px;
+            border: 2px solid red;
+        }
+        .demo{
+            background-color: chocolate;
+        }
+    </style>
+</head>
+<body>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium unde molestiae aut deleniti aliquid possimus sit mollitia esse ab minus fugit porro repellat, quisquam officiis suscipit facere distinctio nihil nulla.</p>
+    <p>Quasi, saepe autem culpa labore voluptate omnis libero voluptatibus reprehenderit. Consequatur molestias similique inventore ratione nisi pariatur facere sed maiores vero in, sapiente incidunt animi rem. Voluptate magni repellendus minima.</p>
+
+    <button id="btn">Schimba CSS</button>
+
+    <div class="div-left">
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Praesentium, dolores? Nulla aut perspiciatis, nam minus id impedit ratione voluptate quam magni deleniti. Officiis ipsa hic provident sunt ab, reprehenderit nemo.</p>
+        <p>Quis minus nesciunt inventore architecto adipisci quidem? Alias, non numquam? Explicabo sit velit officia nam, rem corporis atque recusandae doloribus cum nisi non eveniet error, temporibus similique repellat odit placeat!</p>
+        <p>Dignissimos, harum. Fugit in, officiis architecto beatae consequuntur veritatis mollitia quod iure ab amet, obcaecati eius error exercitationem ullam quidem assumenda deleniti quibusdam esse corporis laudantium qui, nulla eligendi. Eum.</p>
+        <p>Nostrum ea, natus, dolor ipsa minus voluptatem, quia quibusdam dolorum veritatis vel necessitatibus labore consectetur eaque nam unde reprehenderit est commodi cumque assumenda. Pariatur voluptas molestias, repellat est perspiciatis eos.</p>
+        <p>Sequi corrupti, eligendi hic, delectus quia sit blanditiis quos ad modi possimus consequuntur perferendis animi minima nulla illo ipsam ipsum voluptates ab reprehenderit sint placeat earum eius eum. Voluptatum, placeat!</p>
+        <button id="btn1">Schimba CSS div stanga</button>
+        
+    </div>
+    <div class="div-right">
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque quos deserunt minima voluptate ex iure quas ipsum sequi animi! Facere ullam qui dolore officiis suscipit aliquam dolorum aperiam tempore voluptates!</p>
+        <p>Fugit corrupti ab excepturi repellendus? Tenetur repellat cumque iste aspernatur recusandae quos cupiditate consequuntur, reiciendis omnis error magni, ex facere minus eos labore exercitationem ullam libero ratione. Aspernatur, nobis dolor!</p>
+        <p>Ad accusantium maiores voluptatibus dolorum dolores autem molestiae, est quos blanditiis iste repudiandae iusto natus! Nobis ad ut quisquam iste blanditiis? Aperiam assumenda ratione vitae et officiis non quibusdam deserunt?</p>
+        <p>Et facilis obcaecati officiis eligendi nam culpa ipsam eaque magnam adipisci enim, accusamus quia possimus sapiente officia nesciunt, itaque minima debitis aut ipsa aperiam eveniet. Cupiditate recusandae illo temporibus rem.</p>
+        <p>Accusantium corrupti asperiores, facilis tenetur accusamus ipsa necessitatibus amet sunt quisquam dolorum distinctio ab magnam ex assumenda ratione expedita in ea odio fugit vero dolore consequuntur est ullam. Repellat, quia.</p>
+        <button id="btn2">Schimba CSS div dreapta</button>
+    </div>
+    <div>
+        <button id="btn4">Schimba CSS Adauga class</button>
+        <button id="btn5">Schimba CSS Sterge class</button>
+        <button id="btn6">Schimba CSS Toggle class</button>
+    </div>
+
+
+
+    <script>
+        //metoda1 cu style
+        let btn = document.getElementById('btn')
+        btn.addEventListener('click', function(){
+            let myParagraphs = document.querySelectorAll('body > p');
+            //let myParagraphs2 = document.getElementsByTagName(p);
+            // for (let i = 0; i < myParagraphs.length; i++){
+            //     myParagraphs[i].style.color = 'red';
+            //     myParagraphs[i].style.fontSize = '18px';
+            // }
+            myParagraphs.forEach(function(value){
+                value.style.color = 'red';
+                value.style.fontSize = '18px';
+
+            })
+        })
+        //metoda2 cu csstext
+        let btn1 = document.getElementById('btn1')
+        btn1.addEventListener('click', function(){
+            let myDiv1 = document.getElementsByClassName('div-left');
+            myDiv1[0].style.cssText='color: red;';
+        });
+        //metoda3 setatribut
+        let btn2 = document.getElementById('btn2')
+        btn2.addEventListener('click', function(){
+            let myDiv2 = document.getElementsByClassName('div-right');
+            myDiv2[0].setAttribute('style', 'color:green;')
+        })
+        //metoda4
+        let btn4 = document.getElementById('btn4')
+        btn4.addEventListener('click', function(){
+            let myDiv2 = document.getElementsByClassName('div-right');
+            myDiv2[0].classList.add('demo');
+        })
+        let btn5 = document.getElementById('btn5')
+        btn5.addEventListener('click', function(){
+            let myDiv2 = document.getElementsByClassName('div-right');
+            myDiv2[0].classList.remove('demo');
+        })
+        let btn6 = document.getElementById('btn6')
+        btn6.addEventListener('click', function(){
+            let myDiv2 = document.getElementsByClassName('div-right');
+            myDiv2[0].classList.toggle('demo');
+        })
+        </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+*{
+    padding: 15px;
+}
+body{
+    width: 100%;
+    margin: auto;
+}
+div{
+    border: 5px solid red;
+    margin: 15px;
+}
+div p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    text-align: left;
+    text-indent: 10px;
+}
+body > div > div > div {
+    background-color: aqua;
+}
+body > div >div {
+    background-color: antiquewhite;
+}
+body > div {
+    background-color: blueviolet;
+}
+p + div {
+    color: red;
+}
+div div div p {
+    color: green;
+}
