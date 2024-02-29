@@ -14,7 +14,7 @@
 }
 
 [data-theme="dark"] {
-  --mycolor: #000000;
+  --mycolor: hsl(0, 0%, 0%);
   --mybackground: rgba(52, 62, 74, 0.8);
   --primary-color: #9a97f3;
   --secondary-color: #818cab;
@@ -295,7 +295,7 @@ h6 {
   padding: 0 3px;
   font-size: 15px;
   font-weight: 600;
-  color: #222222;
+  color: var(--mycolor);
   white-space: nowrap;
   transition: 0.3s;
   position: relative;
